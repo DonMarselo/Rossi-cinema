@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Creato il: Dic 11, 2022 alle 23:42
+-- Creato il: Dic 12, 2022 alle 22:55
 -- Versione del server: 10.4.24-MariaDB
 -- Versione PHP: 7.4.29
 
@@ -29,7 +29,8 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `film` (
   `id` int(11) NOT NULL,
-  `titolo` varchar(30) NOT NULL,
+  `titolo` varchar(50) NOT NULL,
+  `genere` varchar(20) NOT NULL,
   `regista` varchar(50) NOT NULL,
   `anno` int(4) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
@@ -38,8 +39,13 @@ CREATE TABLE `film` (
 -- Dump dei dati per la tabella `film`
 --
 
-INSERT INTO `film` (`id`, `titolo`, `regista`, `anno`) VALUES
-(1, 'Star wars III - La vendetta de', 'George Lucas', 2005);
+INSERT INTO `film` (`id`, `titolo`, `genere`, `regista`, `anno`) VALUES
+(1, 'Star Wars I - La minaccia fantasma', 'Sci-fi/Azione', 'George Lucas', 1999),
+(2, 'Star Wars II - L\'attacco dei cloni', 'Sci-fi/Azione', 'George Lucas', 2002),
+(3, 'Star wars III - La vendetta dei sith', 'Sci-fi/Azione', 'George Lucas', 2005),
+(4, 'Shrek', 'Animazione/Fantasy', 'Andrew Adamson', 2001),
+(5, 'Il cavaliere oscuro', 'Azione/Avventura', 'Christopher Nolan', 2008),
+(6, 'Deadpool', 'Azione/Avventura', 'Tim Miller', 2016);
 
 -- --------------------------------------------------------
 
@@ -86,7 +92,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT per la tabella `film`
 --
 ALTER TABLE `film`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT per la tabella `users`

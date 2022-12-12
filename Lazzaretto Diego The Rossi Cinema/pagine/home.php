@@ -1,11 +1,5 @@
 <?php
-    require_once'dbconfig.php';
-    
-    $sql = "SELECT titolo,regista,genere,anno from cinema where id=1";
-    $query = $dbh->prepare($sql);
-    $query->execute();
-    $results=$query->fetchAll(PDO::FETCH_OBJ);
-    $cnt=1;
+    require_once 'dbconnection.php';
 ?>
 
 <!DOCTYPE html>
@@ -25,42 +19,57 @@
         <div><h2>BENVENUTO NEL CINEMA ITIS ROSSI</h2></div>
         <div><a href="login.php"><input type="button" id="login" onclick="" value="👤LOGIN"></a></div>
     </div>
-    <?php echo htmlentities($result->titolo);?>
+
     <div class="scelta_film">
         <div class="film">
+            <?php 
+                $sql = "SELECT titolo,genere,regista,anno from film where id=1";
+                if($result = $connessione->query($sql)){
+                    if($result->num_rows > 0){
+                        while($row = $result->fetch_array()){?>
             <figure>
                 <img src="../immagini/starwars1.jpg">
                 <figcaption>
-                    <h2><?php echo htmlentities($result->titolo);?></h2>
-                    <p>Genere: Sci-fi/Azione</p>
-                    <p>Regista: George Lucas</p>
-                    <p>Anno: 1999</p>
+                    <h2><?php echo $row['titolo'];?></h2>
+                    <p>Genere: <?php echo $row['genere'];?></p>
+                    <p>Regista: <?php echo $row['regista'];?></p>
+                    <p>Anno: <?php echo $row['anno'];}}}?></p>
                     <p><input type="button" value="Acquista ora"></p>
                 </figcaption>
             </figure>
         </div>
 
         <div class="film">
+            <?php 
+                $sql = "SELECT titolo,genere,regista,anno from film where id=2";
+                if($result = $connessione->query($sql)){
+                    if($result->num_rows > 0){
+                        while($row = $result->fetch_array()){?>
             <figure>
                 <img src="../immagini/starwars2.jpg">
                 <figcaption>
-                    <h2>Star Wars II - L'attacco dei cloni</h2>
-                    <p>Genere: Sci-fi/Azione</p>
-                    <p>Regista: George Lucas</p>
-                    <p>Anno: 2002</p>
+                    <h2><?php echo $row['titolo'];?></h2>
+                    <p>Genere: <?php echo $row['genere'];?></p>
+                    <p>Regista: <?php echo $row['regista'];?></p>
+                    <p>Anno: <?php echo $row['anno'];}}}?></p>
                     <p><input type="button" value="Acquista ora"></p>
                 </figcaption>
             </figure>
         </div>
 
         <div class="film">
+            <?php 
+                $sql = "SELECT titolo,genere,regista,anno from film where id=3";
+                if($result = $connessione->query($sql)){
+                    if($result->num_rows > 0){
+                        while($row = $result->fetch_array()){?>
             <figure>
                 <img src="../immagini/starwars3.jpg">
                 <figcaption>
-                    <h2>Star Wars III - La vendetta dei sith</h2>
-                    <p>Genere: Sci-fi/Azione</p>
-                    <p>Regista: George Lucas</p>
-                    <p>Anno: 2005</p>
+                    <h2><?php echo $row['titolo'];?></h2>
+                    <p>Genere: <?php echo $row['genere'];?></p>
+                    <p>Regista: <?php echo $row['regista'];?></p>
+                    <p>Anno: <?php echo $row['anno'];}}}?></p>
                     <p><input type="button" value="Acquista ora"></p>
                 </figcaption>
             </figure>
@@ -69,44 +78,67 @@
 
     <div class="scelta_film">
         <div class="film">
+            <?php 
+                $sql = "SELECT titolo,genere,regista,anno from film where id=4";
+                if($result = $connessione->query($sql)){
+                    if($result->num_rows > 0){
+                        while($row = $result->fetch_array()){?>
             <figure>
                 <img src="../immagini/shrek.jpg">
                 <figcaption>
-                    <h2>Star Wars I - La minaccia fantasma</h2>
-                    <p>Genere: Sci-fi/Azione</p>
-                    <p>Regista: George Lucas</p>
-                    <p>Anno: 1999</p>
+                    <h2><?php echo $row['titolo'];?></h2>
+                    <p>Genere: <?php echo $row['genere'];?></p>
+                    <p>Regista: <?php echo $row['regista'];?></p>
+                    <p>Anno: <?php echo $row['anno'];}}}?></p>
                     <p><input type="button" value="Acquista ora"></p>
                 </figcaption>
             </figure>
         </div>
 
         <div class="film">
+            <?php 
+                $sql = "SELECT titolo,genere,regista,anno from film where id=5";
+                if($result = $connessione->query($sql)){
+                    if($result->num_rows > 0){
+                        while($row = $result->fetch_array()){?>
             <figure>
                 <img src="../immagini/batman.jpg">
                 <figcaption>
-                    <h2>Star Wars II - L'attacco dei cloni</h2>
-                    <p>Genere: Sci-fi/Azione</p>
-                    <p>Regista: George Lucas</p>
-                    <p>Anno: 2002</p>
+                    <h2><?php echo $row['titolo'];?></h2>
+                    <p>Genere: <?php echo $row['genere'];?></p>
+                    <p>Regista: <?php echo $row['regista'];?></p>
+                    <p>Anno: <?php echo $row['anno'];}}}?></p>
                     <p><input type="button" value="Acquista ora"></p>
                 </figcaption>
             </figure>
         </div>
 
         <div class="film">
+            <?php 
+                $sql = "SELECT titolo,genere,regista,anno from film where id=6";
+                if($result = $connessione->query($sql)){
+                    if($result->num_rows > 0){
+                        while($row = $result->fetch_array()){?>
             <figure>
                 <img src="../immagini/deadpool.jpg">
                 <figcaption>
-                    <h2>Star Wars III - La vendetta dei sith</h2>
-                    <p>Genere: Sci-fi/Azione</p>
-                    <p>Regista: George Lucas</p>
-                    <p>Anno: 2005</p>
+                    <h2><?php echo $row['titolo'];?></h2>
+                    <p>Genere: <?php echo $row['genere'];?></p>
+                    <p>Regista: <?php echo $row['regista'];?></p>
+                    <p>Anno: <?php echo $row['anno'];}}}?></p>
                     <p><input type="button" value="Acquista ora"></p>
                 </figcaption>
             </figure>
         </div>
     </div>
+
+    <footer>
+        <p>Author: Lazzaretto Diego -</p>
+        <p><a href="https://insegreto.com/storage/shouts/B0NqM7zp6Jm74Rm0vvm/XR0nONZgRDvZvG4a404_hq.jpg">- 6190167@itisrossi.vi.it -</a></p>
+        <p>- <?php
+            echo $msg;
+        ?></p>
+    </footer>
 </body>
 </html>
 
