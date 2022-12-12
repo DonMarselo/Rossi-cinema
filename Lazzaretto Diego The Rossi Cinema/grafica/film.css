@@ -1,0 +1,27 @@
+#scelta_film
+{
+    top: 50%;
+    left: 50%;
+    margin-top: 5%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+#starwars3
+{
+    border-style: solid;
+    border-color: orangered;
+    border-radius: 20px;
+    height: 200px;
+    width: 200px;
+}
+
+#starwars2
+{
+    border-style: solid;
+    border-color: orangered;
+    border-radius: 20px;
+    height: 200px;
+    width: 200px;
+}
