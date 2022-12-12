@@ -1,6 +1,12 @@
 body {
-    background-color: black;
-    color: orangered;
+    background: linear-gradient(45deg, #000000, #313131);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 1500px;
+    color: rgba(221, 97, 97, 0.8);
+    margin: 0;
+    padding: 0;
+    text-align: center;
 }
 
 img {
@@ -10,7 +16,9 @@ img {
 }
 
 #navbar {
+    background-color: black;
     position: sticky;
+    z-index: 200;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
@@ -31,12 +39,13 @@ img {
 #logo_navbar {
     height: 100px;
     width: 150px;
+    margin-top: 3%;
 }
 
 #login {
     margin-left: 20%;
     background-color: black;
-    color: orangered;
+    color: rgb(205, 112, 78);
     border-radius: 5px;
     border-color: orangered;
     width: 180px;

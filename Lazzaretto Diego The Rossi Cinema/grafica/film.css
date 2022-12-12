@@ -1,27 +1,104 @@
-#scelta_film
+img {
+    width: 262px;
+    height: 391px;
+  }
+
+.scelta_film
 {
     top: 50%;
     left: 50%;
     margin-top: 5%;
     display: flex;
-    justify-content: space-evenly;
-    align-items: center;
+    justify-content:space-evenly;
 }
 
-#starwars3
+input
 {
-    border-style: solid;
+    margin-top: 3%;
+    background-color: black;
+    color: rgb(205, 112, 78);
+    border-radius: 5px;
     border-color: orangered;
-    border-radius: 20px;
-    height: 200px;
-    width: 200px;
+    width: 100px;
+    height: 30px;
+    top: 50%;
 }
 
-#starwars2
+/*INTERFACCIA FILM*/
+.film
 {
     border-style: solid;
-    border-color: orangered;
+    border-color: rgb(202, 138, 115);
     border-radius: 20px;
-    height: 200px;
-    width: 200px;
+    height: 391px;
+    width: 262px;
+    overflow: hidden;
+    position: relative;
+}
+
+.film figure
+{
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.film figure img
+{
+    width: 100%;
+}
+
+.film figcaption
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    padding: 80px 20px;
+    z-index: 100;
+    opacity: 0;
+    transition-delay: .3s;
+    transition: .5s ease;
+}
+.film:hover figcaption
+{
+    opacity: 1;
+}
+
+.film figure:before,
+.film figure:after
+{
+    content: '';
+    position: absolute;
+    transition: .5s ease-in-out;
+    height: 200%;
+    width: 200%;
+    background: #000;
+}
+.film figure:before
+{
+    right: 0;
+    bottom: 0;
+    background: rgba(131, 131, 131, 0.8);
+    transform: skew(45deg) translateX(100%);
+}
+
+.film figure:after
+{
+    left: 0;
+    top: 0;
+    background: rgba(0, 0, 0, 0.8);
+    transform: skew(-135deg) translateX(-100%);
+}
+
+.film:hover figure:before
+{
+    transform: skew(45deg) translateX(0%);
+}
+
+.film:hover figure:after
+{
+    transform: skew(-135deg) translateX(0%);
 }
