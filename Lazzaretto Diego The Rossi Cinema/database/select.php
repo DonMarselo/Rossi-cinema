@@ -11,15 +11,26 @@
         }
         else 
         {
-            $sql="SELECT email,password from users where email='$email' AND password='$password'";
-
+            $sql="SELECT nome,email,password from users where email='$email' AND password='$password'";
         
             if ($result = $connessione->query($sql))
             {
                 if($result->num_rows > 0)
                 {
+                    $sql = "SELECT nome from users where email='$email' AND password='$password'";
+                    if($result = $connessione->query($sql)){
+                        if($result->num_rows > 0){
+                            while($row = $result->fetch_array()){
+                                $nome = $row['nome'];
+                            }
+                        }
+                    }
                     echo "<script type='text/javascript'>alert('Accesso effettuato'); window.location.href = 'home.php';
                     </script>";
+                    session_start();
+                    $_SESSION['datiUtente'] = $result->fetch_assoc();
+                    $_SESSION['nome'] = $nome;
+                    $_SESSION['login']=true;
                 }
                 else {
                     echo "<script type='text/javascript'>alert('Impossibile trovare l`account'); window.location.href = '../index/login.html';

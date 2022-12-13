@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Creato il: Dic 12, 2022 alle 22:55
+-- Creato il: Dic 14, 2022 alle 00:23
 -- Versione del server: 10.4.24-MariaDB
 -- Versione PHP: 7.4.29
 
@@ -50,6 +50,19 @@ INSERT INTO `film` (`id`, `titolo`, `genere`, `regista`, `anno`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Struttura della tabella `prenotazioni`
+--
+
+CREATE TABLE `prenotazioni` (
+  `email` varchar(50) NOT NULL,
+  `titolo` varchar(50) NOT NULL,
+  `data` date NOT NULL,
+  `posti` int(2) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- --------------------------------------------------------
+
+--
 -- Struttura della tabella `users`
 --
 
@@ -66,7 +79,8 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `nome`, `cognome`, `email`, `password`) VALUES
-(1, 'Diego', 'Lazzaretto', '6190167@itisrossi.vi.it', 'sas');
+(1, 'Diego', 'Lazzaretto', '6190167@itisrossi.vi.it', 'sas'),
+(33, 'Alessandro', 'Michelazzo', 'am@azzo.it', 'qwerty');
 
 --
 -- Indici per le tabelle scaricate
@@ -98,7 +112,7 @@ ALTER TABLE `film`
 -- AUTO_INCREMENT per la tabella `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=34;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

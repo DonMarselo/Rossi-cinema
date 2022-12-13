@@ -1,5 +1,11 @@
 <?php
     require_once 'dbconnection.php';
+
+        session_start();
+        if(!isset($_SESSION['login'])){
+            echo "<script type='text/javascript'> window.location.href = '../index/login.html';
+                        </script>";
+        }
 ?>
 
 <!DOCTYPE html>
@@ -16,8 +22,8 @@
 <body>
     <div id="navbar">
         <div><img src="../img/logo_rossi.jpg" id="logo_navbar"></div>
-        <div><h2>BENVENUTO NEL CINEMA ITIS ROSSI</h2></div>
-        <div><a href="../index/login.html"><input type="button" id="login_button" onclick="" value="👤LOGIN"></a></div>
+        <div><h2>Benvenuto <?php echo $_SESSION['nome'];?> nel cinema ITIS ROSSI</h2></div>
+        <div><a href="logout.php"><input type="button" id="login_button" onclick="" value="👤LOGOUT"></a></div>
     </div>
 
     <div class="scelta_film">
@@ -34,7 +40,7 @@
                     <p>Genere: <?php echo $row['genere'];?></p>
                     <p>Regista: <?php echo $row['regista'];?></p>
                     <p>Anno: <?php echo $row['anno'];}}}?></p>
-                    <p><input type="button" value="Acquista ora"></p>
+                    <p><form action="starwars1.php"><input type="submit" value="Acquista ora"></form></p>
                 </figcaption>
             </figure>
         </div>
@@ -52,7 +58,7 @@
                     <p>Genere: <?php echo $row['genere'];?></p>
                     <p>Regista: <?php echo $row['regista'];?></p>
                     <p>Anno: <?php echo $row['anno'];}}}?></p>
-                    <p><input type="button" value="Acquista ora"></p>
+                    <p><form action="starwars2.php"><input type="submit" value="Acquista ora"></form></p>
                 </figcaption>
             </figure>
         </div>
@@ -70,7 +76,7 @@
                     <p>Genere: <?php echo $row['genere'];?></p>
                     <p>Regista: <?php echo $row['regista'];?></p>
                     <p>Anno: <?php echo $row['anno'];}}}?></p>
-                    <p><input type="button" value="Acquista ora"></p>
+                    <p><form action="starwars3.php"><input type="submit" value="Acquista ora"></form></p>
                 </figcaption>
             </figure>
         </div>
@@ -90,7 +96,7 @@
                     <p>Genere: <?php echo $row['genere'];?></p>
                     <p>Regista: <?php echo $row['regista'];?></p>
                     <p>Anno: <?php echo $row['anno'];}}}?></p>
-                    <p><input type="button" value="Acquista ora"></p>
+                    <p><form action="shrek.php"><input type="submit" value="Acquista ora"></form></p>
                 </figcaption>
             </figure>
         </div>
@@ -108,7 +114,7 @@
                     <p>Genere: <?php echo $row['genere'];?></p>
                     <p>Regista: <?php echo $row['regista'];?></p>
                     <p>Anno: <?php echo $row['anno'];}}}?></p>
-                    <p><input type="button" value="Acquista ora"></p>
+                    <p><form action="batman.php"><input type="submit" value="Acquista ora"></form></p>
                 </figcaption>
             </figure>
         </div>
@@ -126,7 +132,7 @@
                     <p>Genere: <?php echo $row['genere'];?></p>
                     <p>Regista: <?php echo $row['regista'];?></p>
                     <p>Anno: <?php echo $row['anno'];}}}?></p>
-                    <p><input type="button" value="Acquista ora"></p>
+                    <p><form action="deadpool.php"><input type="submit" value="Acquista ora"></form></p>
                 </figcaption>
             </figure>
         </div>

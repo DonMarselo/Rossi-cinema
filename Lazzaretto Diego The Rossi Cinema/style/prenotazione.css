@@ -1,0 +1,46 @@
+body {
+    background: linear-gradient(45deg, #000000, #3f3f3f);
+    color: rgba(221, 97, 97, 0.8);
+    margin: 1;
+    padding: 1;
+    text-align: center;
+}
+
+#informazioni
+{
+    display: flex;
+    position: absolute;
+    background-color: #000000;
+    height: 450px;
+    width: 750px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 15px;
+    border-color: rgba(221, 97, 97, 0.8);
+    border-style: solid;
+}
+
+#immagine
+{
+    float: left;
+    width: 50%;
+    height: 100%;
+    border-radius: 15px;
+    background-color: aliceblue;
+}
+
+#dati
+{
+    float: right;
+    width: 50%;
+    height: 100%;
+    background-color: rgb(4, 42, 77);
+}
+
+img
+{
+    height: 100%;
+    width: 100%;
+    border-radius: 15px;
+}
