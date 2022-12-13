@@ -1,1 +1,1 @@
-Aprire la cartella database
+Aprire la cartella database -> home.php
