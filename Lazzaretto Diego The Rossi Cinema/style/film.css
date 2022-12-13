@@ -16,9 +16,9 @@ input
 {
     margin-top: 3%;
     background-color: black;
-    color: rgb(205, 112, 78);
+    color: rgba(221, 97, 97, 0.8);
     border-radius: 5px;
-    border-color: orangered;
+    border-color: rgb(184, 34, 34);
     width: 100px;
     height: 30px;
     top: 50%;

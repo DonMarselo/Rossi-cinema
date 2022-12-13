@@ -8,16 +8,16 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/x-icon" href="../immagini/icona_cinema.png?ts=<?=time()?>&quot">
-    <link rel="stylesheet" href="../grafica/home.css?ts=<?=time()?>&quot"> 
-    <link rel="stylesheet" href="../grafica/film.css?ts=<?=time()?>&quot"> 
+    <link rel="icon" type="image/x-icon" href="../img/icona_cinema.png?ts=<?=time()?>&quot">
+    <link rel="stylesheet" href="../style/home.css?ts=<?=time()?>&quot"> 
+    <link rel="stylesheet" href="../style/film.css?ts=<?=time()?>&quot"> 
     <title>Home - The Rossi Cinema</title>
 </head>
 <body>
     <div id="navbar">
-        <div><img src="../immagini/logo_rossi.jpg" id="logo_navbar"></div>
+        <div><img src="../img/logo_rossi.jpg" id="logo_navbar"></div>
         <div><h2>BENVENUTO NEL CINEMA ITIS ROSSI</h2></div>
-        <div><a href="login.php"><input type="button" id="login_button" onclick="" value="👤LOGIN"></a></div>
+        <div><a href="../index/login.html"><input type="button" id="login_button" onclick="" value="👤LOGIN"></a></div>
     </div>
 
     <div class="scelta_film">
@@ -28,7 +28,7 @@
                     if($result->num_rows > 0){
                         while($row = $result->fetch_array()){?>
             <figure>
-                <img src="../immagini/starwars1.jpg">
+                <img src="../img/starwars1.jpg">
                 <figcaption>
                     <h2><?php echo $row['titolo'];?></h2>
                     <p>Genere: <?php echo $row['genere'];?></p>
@@ -46,7 +46,7 @@
                     if($result->num_rows > 0){
                         while($row = $result->fetch_array()){?>
             <figure>
-                <img src="../immagini/starwars2.jpg">
+                <img src="../img/starwars2.jpg">
                 <figcaption>
                     <h2><?php echo $row['titolo'];?></h2>
                     <p>Genere: <?php echo $row['genere'];?></p>
@@ -64,7 +64,7 @@
                     if($result->num_rows > 0){
                         while($row = $result->fetch_array()){?>
             <figure>
-                <img src="../immagini/starwars3.jpg">
+                <img src="../img/starwars3.jpg">
                 <figcaption>
                     <h2><?php echo $row['titolo'];?></h2>
                     <p>Genere: <?php echo $row['genere'];?></p>
@@ -84,7 +84,7 @@
                     if($result->num_rows > 0){
                         while($row = $result->fetch_array()){?>
             <figure>
-                <img src="../immagini/shrek.jpg">
+                <img src="../img/shrek.jpg">
                 <figcaption>
                     <h2><?php echo $row['titolo'];?></h2>
                     <p>Genere: <?php echo $row['genere'];?></p>
@@ -102,7 +102,7 @@
                     if($result->num_rows > 0){
                         while($row = $result->fetch_array()){?>
             <figure>
-                <img src="../immagini/batman.jpg">
+                <img src="../img/batman.jpg">
                 <figcaption>
                     <h2><?php echo $row['titolo'];?></h2>
                     <p>Genere: <?php echo $row['genere'];?></p>
@@ -120,7 +120,7 @@
                     if($result->num_rows > 0){
                         while($row = $result->fetch_array()){?>
             <figure>
-                <img src="../immagini/deadpool.jpg">
+                <img src="../img/deadpool.jpg">
                 <figcaption>
                     <h2><?php echo $row['titolo'];?></h2>
                     <p>Genere: <?php echo $row['genere'];?></p>

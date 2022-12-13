@@ -1,12 +1,16 @@
 body {
-    background: linear-gradient(15deg, #000000, #3f3f3f);
+    background: linear-gradient(45deg, #000000, #3f3f3f);
     background-size: cover;
     background-repeat: no-repeat;
-    height: 1300px;
     color: rgba(221, 97, 97, 0.8);
     margin: 0;
     padding: 0;
     text-align: center;
+}
+
+h2
+{
+    color: rgb(184, 34, 34);
 }
 
 footer
