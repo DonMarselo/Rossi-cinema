@@ -17,7 +17,7 @@
     <div id="navbar">
         <div><img src="../immagini/logo_rossi.jpg" id="logo_navbar"></div>
         <div><h2>BENVENUTO NEL CINEMA ITIS ROSSI</h2></div>
-        <div><a href="login.php"><input type="button" id="login" onclick="" value="👤LOGIN"></a></div>
+        <div><a href="login.php"><input type="button" id="login_button" onclick="" value="👤LOGIN"></a></div>
     </div>
 
     <div class="scelta_film">
