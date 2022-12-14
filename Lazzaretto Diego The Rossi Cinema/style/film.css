@@ -16,7 +16,7 @@ input
 {
     margin-top: 3%;
     background-color: black;
-    color: rgba(221, 97, 97, 0.8);
+    color: rgba(208, 126, 126, 0.8);
     border-radius: 5px;
     border-color: rgb(184, 34, 34);
     width: 100px;
@@ -65,6 +65,7 @@ input
 .film:hover figcaption
 {
     opacity: 1;
+    color: rgb(173, 173, 173);
 }
 
 .film figure:before,

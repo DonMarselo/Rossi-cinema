@@ -25,11 +25,21 @@
                             }
                         }
                     }
+
+                    $sql = "SELECT email from users where email='$email' AND password='$password'";
+                    if($result = $connessione->query($sql)){
+                        if($result->num_rows > 0){
+                            while($row = $result->fetch_array()){
+                                $email = $row['email'];
+                            }
+                        }
+                    }
                     echo "<script type='text/javascript'>alert('Accesso effettuato'); window.location.href = 'home.php';
                     </script>";
                     session_start();
                     $_SESSION['datiUtente'] = $result->fetch_assoc();
                     $_SESSION['nome'] = $nome;
+                    $_SESSION['email'] = $email;
                     $_SESSION['login']=true;
                 }
                 else {

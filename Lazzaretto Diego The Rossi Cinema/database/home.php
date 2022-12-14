@@ -23,7 +23,8 @@
     <div id="navbar">
         <div><img src="../img/logo_rossi.jpg" id="logo_navbar"></div>
         <div><h2>Benvenuto <?php echo $_SESSION['nome'];?> nel cinema ITIS ROSSI</h2></div>
-        <div><a href="logout.php"><input type="button" id="login_button" onclick="" value="👤LOGOUT"></a></div>
+        <div><a href="riepilogo.php"><input type="button" id="riepilogo_button" value="Riepilogo"></a></div>
+        <div><a href="logout.php"><input type="button" id="login_button" value="👤LOGOUT"></a></div>
     </div>
 
     <div class="scelta_film">

@@ -34,8 +34,9 @@
             <p>Regista: <?php echo $row['regista'];?></p>
             <p>Anno: <?php echo $row['anno'];}}}?></p>
             <hr>
-            <form action="prenotazione.php" method="POST">
+            <form action="insert_prenotazione.php" method="POST">
                 Seleziona posti: 
+                <input type="hidden" value="<?php echo $id?>" name="film_id">
                 <input type="number" max="20" min="1" name="posti">
                 <p><input type="submit" name="prenota" value="Prenota posti"></p>
             </form>

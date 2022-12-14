@@ -68,7 +68,18 @@ img {
 #login_button {
     margin-left: 20%;
     background-color: black;
-    color: rgba(221, 97, 97, 0.8);
+    color: rgb(173, 173, 173);
+    border-radius: 5px;
+    border-color: rgba(221, 97, 97, 0.8);
+    width: 180px;
+    height: 50px;
+    top: 50%;
+}
+
+#riepilogo_button {
+    margin-left: 20%;
+    background-color: black;
+    color: rgb(173, 173, 173);
     border-radius: 5px;
     border-color: rgba(221, 97, 97, 0.8);
     width: 180px;
