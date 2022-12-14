@@ -34,13 +34,16 @@
                     if($result->num_rows > 0){
                         while($row = $result->fetch_array()){?>
             <figure>
-                <img src="../img/starwars1.jpg">
+                <img src="../img/1.jpg">
                 <figcaption>
                     <h2><?php echo $row['titolo'];?></h2>
                     <p>Genere: <?php echo $row['genere'];?></p>
                     <p>Regista: <?php echo $row['regista'];?></p>
                     <p>Anno: <?php echo $row['anno'];}}}?></p>
-                    <p><form action="starwars1.php"><input type="submit" value="Acquista ora"></form></p>
+                    <form action="prenotazione.php" method="POST">
+                        <input type="hidden" value="1" name="id_film">
+                        <p><input type="submit" value="Acquista ora"></p>
+                    </form>
                 </figcaption>
             </figure>
         </div>
@@ -52,13 +55,16 @@
                     if($result->num_rows > 0){
                         while($row = $result->fetch_array()){?>
             <figure>
-                <img src="../img/starwars2.jpg">
+                <img src="../img/2.jpg">
                 <figcaption>
                     <h2><?php echo $row['titolo'];?></h2>
                     <p>Genere: <?php echo $row['genere'];?></p>
                     <p>Regista: <?php echo $row['regista'];?></p>
                     <p>Anno: <?php echo $row['anno'];}}}?></p>
-                    <p><form action="starwars2.php"><input type="submit" value="Acquista ora"></form></p>
+                    <form action="prenotazione.php" method="POST">
+                        <input type="hidden" value="2" name="id_film">
+                        <p><input type="submit" value="Acquista ora"></p>
+                    </form>
                 </figcaption>
             </figure>
         </div>
@@ -70,13 +76,16 @@
                     if($result->num_rows > 0){
                         while($row = $result->fetch_array()){?>
             <figure>
-                <img src="../img/starwars3.jpg">
+                <img src="../img/3.jpg">
                 <figcaption>
                     <h2><?php echo $row['titolo'];?></h2>
                     <p>Genere: <?php echo $row['genere'];?></p>
                     <p>Regista: <?php echo $row['regista'];?></p>
                     <p>Anno: <?php echo $row['anno'];}}}?></p>
-                    <p><form action="starwars3.php"><input type="submit" value="Acquista ora"></form></p>
+                    <form action="prenotazione.php" method="POST">
+                        <input type="hidden" value="3" name="id_film">
+                        <p><input type="submit" value="Acquista ora"></p>
+                    </form>
                 </figcaption>
             </figure>
         </div>
@@ -90,13 +99,16 @@
                     if($result->num_rows > 0){
                         while($row = $result->fetch_array()){?>
             <figure>
-                <img src="../img/shrek.jpg">
+                <img src="../img/4.jpg">
                 <figcaption>
                     <h2><?php echo $row['titolo'];?></h2>
                     <p>Genere: <?php echo $row['genere'];?></p>
                     <p>Regista: <?php echo $row['regista'];?></p>
                     <p>Anno: <?php echo $row['anno'];}}}?></p>
-                    <p><form action="shrek.php"><input type="submit" value="Acquista ora"></form></p>
+                    <form action="prenotazione.php" method="POST">
+                        <input type="hidden" value="4" name="id_film">
+                        <p><input type="submit" value="Acquista ora"></p>
+                    </form>
                 </figcaption>
             </figure>
         </div>
@@ -108,13 +120,16 @@
                     if($result->num_rows > 0){
                         while($row = $result->fetch_array()){?>
             <figure>
-                <img src="../img/batman.jpg">
+                <img src="../img/5.jpg">
                 <figcaption>
                     <h2><?php echo $row['titolo'];?></h2>
                     <p>Genere: <?php echo $row['genere'];?></p>
                     <p>Regista: <?php echo $row['regista'];?></p>
                     <p>Anno: <?php echo $row['anno'];}}}?></p>
-                    <p><form action="batman.php"><input type="submit" value="Acquista ora"></form></p>
+                    <form action="prenotazione.php" method="POST">
+                        <input type="hidden" value="5" name="id_film">
+                        <p><input type="submit" value="Acquista ora"></p>
+                    </form>
                 </figcaption>
             </figure>
         </div>
@@ -126,13 +141,16 @@
                     if($result->num_rows > 0){
                         while($row = $result->fetch_array()){?>
             <figure>
-                <img src="../img/deadpool.jpg">
+                <img src="../img/6.jpg">
                 <figcaption>
                     <h2><?php echo $row['titolo'];?></h2>
                     <p>Genere: <?php echo $row['genere'];?></p>
                     <p>Regista: <?php echo $row['regista'];?></p>
                     <p>Anno: <?php echo $row['anno'];}}}?></p>
-                    <p><form action="deadpool.php"><input type="submit" value="Acquista ora"></form></p>
+                    <form action="prenotazione.php" method="POST">
+                        <input type="hidden" value="6" name="id_film">
+                        <p><input type="submit" value="Acquista ora"></p>
+                    </form>
                 </figcaption>
             </figure>
         </div>

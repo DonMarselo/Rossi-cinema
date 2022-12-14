@@ -63,12 +63,12 @@ img
 
 input[type=submit]
 {
-    width: 165px;
-    height: 45px;
+    width: 150px;
+    height: 40px;
     background-color: black;
     color: rgba(221, 97, 97, 0.8);
     border-radius: 5px;
-    border-color: rgba(221, 97, 97, 0.8);
+    border-color: rgba(208, 0, 0, 0.8);
 }
 
 h2
@@ -76,4 +76,9 @@ h2
     color: rgb(184, 34, 34);
     font-size: 30px;
     margin: 2%;
+}
+
+hr
+{
+    width: 75%;
 }
