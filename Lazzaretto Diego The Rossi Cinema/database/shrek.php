@@ -23,7 +23,20 @@
             <img src="../img/shrek.jpg">
         </div>
         <div id="dati">
-            s
+        <?php 
+                $sql = "SELECT titolo,genere,regista,anno from film where id=4";
+                if($result = $connessione->query($sql)){
+                    if($result->num_rows > 0){
+                        while($row = $result->fetch_array()){?>
+            <h2><?php echo $row['titolo'];?></h2>
+            <p>Genere: <?php echo $row['genere'];?></p>
+            <p>Regista: <?php echo $row['regista'];?></p>
+            <p>Anno: <?php echo $row['anno'];}}}?></p>
+            <form action="prenotazione.php" method="POST">
+                Seleziona posti: 
+                <input type="number" max="20" min="1" name="posti">
+                <p><input type="submit" name="prenota" value="Prenota posti"></p>
+            </form>
         </div>
     </div>
 </body>
